@@ -1,0 +1,25 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<h3>If you saw the old way</h3>
+<% if current_user %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: delete, data: { turbo_method: :delete } %>
+    <%= link_to "Edit registration", edit_user_registration_path %>
+
+<% else %>
+    <%= link_to "Sign up", new_user_registration_path %>
+    <%= link_to "Sign in", new_user_session_path %>
+
+<% end %>
+
+<h3>What you might have seen lately</h3>
+
+<% if signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: delete, data: { turbo_method: :delete } %>
+    <%= link_to "Edit registration", edit_user_registration_path %>
+
+<% else %>
+    <%= link_to "Sign up", new_user_registration_path %>
+    <%= link_to "Sign in", new_user_session_path %>
+
+<% end %>
