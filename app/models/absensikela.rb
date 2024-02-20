@@ -1,0 +1,2 @@
+class Absensikela < ApplicationRecord
+end
